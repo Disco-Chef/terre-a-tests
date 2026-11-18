@@ -1,0 +1,17 @@
+{
+  "name": "terre-a-tests",
+  "version": "1.0.0",
+  "description": "Kata d'entretien technique autour d'un atelier de céramique",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:1": "node --test exercices/1-etape-suivante/etape-suivante.test.js",
+    "test:2": "node --test exercices/2-pertes/pertes.test.js",
+    "test:3": "node --test exercices/3-chasse-aux-bugs/valider-commande.test.js",
+    "test:4": "node --test exercices/4-menage/statut-commande.test.js"
+  }
+}
