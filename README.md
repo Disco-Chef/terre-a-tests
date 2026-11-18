@@ -22,7 +22,8 @@ Chaque exercice a sa commande : `npm run test:1`, `npm run test:2`, etc.
 
 ## Exercice 0 : avant de commencer
 
-1. Crée une branche pour ton travail. Choisis une convention de nommage et explique-la.
+1. Crée une branche pour ton travail, et dis-nous pourquoi tu la nommes ainsi : quelle
+   convention tu suis, et à quoi elle sert dans une équipe.
 2. Fais un commit à la fin de chaque exercice, avec un message qui dira quelque chose
    à la personne qui relira ton travail dans six mois.
 
