@@ -50,12 +50,14 @@ donc celle juste avant.
 
 **Avant d'écrire du code**, explique ta démarche : à voix haute, en commentaire ou
 en pseudo-code. Ensuite seulement, implémente `pertesParEtape` (`npm run test:2`).
+Les règles exactes sont en haut de `pertes.js`.
 
 ## Exercice 3 : chasse aux bugs
 
 📁 `exercices/3-chasse-aux-bugs/`
 
-`validerCommande` vérifie une commande avant de l'enregistrer. Les règles métier :
+`validerCommande` vérifie une commande avant de l'enregistrer. Elle renvoie une liste
+de messages d'erreur ; une liste vide veut dire que la commande est valide. Les règles métier :
 
 | Champ | Règle |
 |---|---|
@@ -65,9 +67,11 @@ en pseudo-code. Ensuite seulement, implémente `pertesParEtape` (`npm run test:2
 
 Tous les tests passent… et pourtant, le code contient plusieurs bugs.
 
-1. Liste d'abord tes cas de test (un tableau, ou des scénarios Gherkin) **sans lire le code**.
-2. Écris-les dans `valider-commande.test.js` : ils doivent faire apparaître les bugs.
-3. Corrige le code, jusqu'à ce que tous les tests passent.
+1. **Sans lire `valider-commande.js`**, liste les cas de test que tu lancerais : un tableau
+   ou des scénarios Gherkin, sur papier ou en commentaire en haut du fichier de test.
+2. Ajoute-les dans `valider-commande.test.js`, sous les tests existants. Un nouveau test
+   qui échoue a trouvé un bug. (Les tests existants montrent les messages d'erreur exacts.)
+3. Corrige `valider-commande.js` jusqu'à ce que tous les tests passent.
 
 ## Exercice 4 : le ménage
 
@@ -75,7 +79,10 @@ Tous les tests passent… et pourtant, le code contient plusieurs bugs.
 
 `statut-commande.js` marche (les tests passent), mais personne n'ose y toucher.
 Rends-le lisible pour la prochaine personne, **sans changer son comportement** :
-les tests doivent rester verts du début à la fin (`npm run test:4`).
+
+- ne change pas ce que les tests attendent ;
+- lance `npm run test:4` après chaque petit changement : les tests doivent rester verts tout du long ;
+- tu peux renommer la fonction, à condition de mettre à jour l'import dans le fichier de test.
 
 Question bonus : en relisant les tests, y a-t-il une règle métier qui te semble
-bizarre ? Qu'est-ce que tu ferais ?
+bizarre ? Ne la change pas dans le code : dis-nous ce que tu ferais.

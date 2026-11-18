@@ -1,14 +1,13 @@
 // Une étape : { id: 3, nom: "Séchage", ordre: 3, estPerte: false }
 //
-// FONCTION etapeSuivante(etapes, etapeActuelleId)
-//   actuelle ← l'étape de `etapes` dont l'id vaut etapeActuelleId
-//   SI actuelle n'existe pas
-//     LEVER une erreur "Étape inconnue : <etapeActuelleId>"
-//   candidates ← les étapes dont l'ordre est plus grand que actuelle.ordre
-//                ET qui ne sont pas une étape de perte
-//   SI candidates est vide
-//     RENVOYER null
-//   RENVOYER la candidate qui a le plus petit ordre
+// Variables suggérées :
+//   actuelle     l'étape dont l'id vaut etapeActuelleId
+//   candidates   les étapes qui viennent après `actuelle` et qui ne sont pas une perte
+//
+// 1. Trouve `actuelle`. Si elle n'existe pas, lève l'erreur "Étape inconnue : <etapeActuelleId>".
+// 2. Construis `candidates`.
+// 3. Si `candidates` est vide, renvoie null.
+// 4. Sinon, renvoie la candidate qui vient en premier dans l'atelier, c'est-à-dire la plus proche (plus petit ordre).
 
 export function etapeSuivante(etapes, etapeActuelleId) {
   throw new Error("À implémenter");
